@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Golden Peak Annapurna 11 – Tadapani</title>
+  <meta name="description" content="Official website for Hotel Golden Peak Annapurna 11, Tadapani – cozy rooms, mountain views, hearty meals, and trekking-friendly services in the heart of the Annapurna region." />
+  <meta name="keywords" content="Tadapani hotel, Annapurna hotel, Golden Peak, trekking lodge, Ghandruk, Ghorepani, Poon Hill, Nepal" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b1020; --card:#0f1830; --text:#e7ebf6; --muted:#a6b0d4; --brand:#f6c453; --accent:#66b3ff;
+      --glass: rgba(255,255,255,0.04);
+      --bright-accent: rgba(59,143,230,1);
+      --bright-glow: rgba(59,143,230,0.22);
+      --green-1: #60d66a;
+      --green-2: #2ea84a;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Outfit,system-ui,-apple-system,Segoe UI,Roboto;
+      background:linear-gradient(180deg,#050816 0%, #071026 40%, #0b1020 100%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+      min-height:100vh;
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%;height:auto}
+    .container{width:min(1100px,94%);margin:auto}
+
+    /* Header layout */
+    header{position:static}
+    .site-header{position:sticky; top:0; z-index:65; backdrop-filter: blur(12px); background:linear-gradient(180deg, rgba(6,10,24,0.6), rgba(8,12,30,0.55)); border-bottom:1px solid rgba(255,255,255,0.04);}
+
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:12px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .nav-logo{ width:52px; height:52px; border-radius:50%; object-fit:cover; box-shadow:0 6px 18px rgba(0,0,0,0.35); border:2px solid rgba(255,255,255,0.06); margin-right:12px; flex-shrink:0; }
+
+    .brand h1{font-size:1.05rem;margin:0}
+    .brand .sub{display:block;color:var(--muted);font-weight:400;font-size:.78rem}
+
+    nav{display:flex;align-items:center;gap:12px}
+    .menu{display:flex;gap:18px;align-items:center}
+    .menu a{color:var(--muted);font-size:.95rem;padding:6px 4px;border-radius:8px;transition:.22s}
+    .menu a:hover{color:var(--text);transform:translateY(-3px)}
+
+    /* Book Now becomes very visible green */
+    .cta{padding:10px 16px;border-radius:999px;color:#041d12;font-weight:700;box-shadow:0 10px 26px rgba(46,168,74,0.18)}
+    .btn-book{
+      background: linear-gradient(180deg, var(--green-1), var(--green-2));
+      color: #04220b;
+      border: 1px solid rgba(0,0,0,0.12);
+      box-shadow: 0 18px 44px rgba(46,168,74,0.22), 0 4px 10px rgba(0,0,0,0.45);
+      transition: transform .12s, box-shadow .12s, filter .12s;
+    }
+    .btn-book:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 30px 70px rgba(46,168,74,0.30), 0 6px 18px rgba(0,0,0,0.5);
+      filter:brightness(1.03);
+    }
+
+    .hamburger{display:none;cursor:pointer;padding:8px;border-radius:8px}
+    .hamburger span{display:block;width:22px;height:2px;background:#d7def6;margin:4px 0;border-radius:2px}
+
+    /* Hero + content (kept unchanged) */
+    .hero{position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1539635278303-d4002c07eae3?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;filter:brightness(.52) contrast(.95)}
+    .hero::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(2px 2px at 20% 10%, rgba(255,255,255,0.05), transparent), radial-gradient(1.5px 1.5px at 70% 30%, rgba(255,255,255,0.04), transparent);mix-blend-mode:screen;opacity:.85}
+    .hero .wrap{position:relative;z-index:2;min-height:76vh;display:grid;place-items:center;padding:88px 0;text-align:center}
+    .hero h2{font-size:clamp(1.9rem,4vw,3.4rem);margin:0 0 12px;line-height:1.02;text-shadow:0 10px 28px rgba(2,4,10,.6)}
+    .hero p{color:#d8def6;max-width:760px;margin:0 auto 18px;font-size:1.05rem}
+    .badges{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+    .badge{padding:8px 14px;border-radius:999px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.06);color:#fff;font-size:.92rem;backdrop-filter:blur(6px)}
+
+    .actions{margin-top:18px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+    .grid{display:grid;gap:18px}
+    .cards{grid-template-columns:repeat(3,1fr);margin-top:-48px;display:grid}
+    .card{background:linear-gradient(180deg, rgba(16,20,38,.9), rgba(10,12,28,.82));border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.05);box-shadow:0 14px 40px rgba(0,0,0,.45);backdrop-filter: blur(8px);transition:transform .32s,box-shadow .32s}
+    .card:hover{transform:translateY(-8px);box-shadow:0 22px 50px rgba(0,0,0,.5)}
+    .card .pic{height:180px;overflow:hidden;background:#000}
+    .card .pic img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+    .card .pic img:hover{transform:scale(1.07)}
+    .card .content{padding:16px}
+    .card h3{margin:0 0 8px}
+    .card p{margin:0;color:var(--muted);font-size:.98rem}
+
+    section{padding:74px 0;border-top:1px solid rgba(255,255,255,.04)}
+    h2.section-title{font-size:1.9rem;margin:0 0 14px;text-align:center}
+    .section-lead{color:var(--muted);margin:0 auto 24px;max-width:760px;text-align:center}
+
+    .amenities{grid-template-columns:repeat(4,1fr);display:grid;gap:16px}
+    .amen{background:rgba(18,23,54,.9);padding:16px;border-radius:16px;border:1px solid rgba(255,255,255,.03);transition:transform .22s}
+    .amen:hover{transform:translateY(-6px)}
+    .amen h4{margin:8px 0 6px;font-size:1.02rem;color:var(--brand)}
+
+    .rooms{grid-template-columns:repeat(3,1fr);display:grid;gap:14px}
+    .room{background:rgba(16,20,38,.9);border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.04);transition:transform .25s}
+    .room:hover{transform:translateY(-6px)}
+    .room img{width:100%;height:240px;object-fit:cover}
+    .room .content{padding:12px 14px}
+    .room .meta{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-top:1px dashed rgba(255,255,255,.06);background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
+
+    .gallery{grid-template-columns:repeat(4,1fr);display:grid;gap:12px}
+    .gallery img{border-radius:12px;border:1px solid rgba(255,255,255,.06);cursor:pointer;transition:transform .28s,box-shadow .28s}
+    .gallery img:hover{transform:scale(1.04);box-shadow:0 12px 40px rgba(0,0,0,0.6)}
+
+    .split{display:grid;grid-template-columns:1.18fr 1fr;gap:26px;align-items:center}
+    .map{border:0;width:100%;height:360px;border-radius:12px;filter:contrast(1.05) saturate(1.05)}
+
+    .footer{padding:28px 0;color:#c8d1f3;border-top:1px solid rgba(255,255,255,.04);background:linear-gradient(180deg,transparent, rgba(0,0,0,0.02))}
+    .footer small{color:#9ea8cc}
+
+    /* Buttons - base */
+    .btn{display:inline-block;padding:10px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.06);transition:transform .12s,box-shadow .12s,opacity .12s;cursor:pointer;background:transparent;color:var(--text);font-weight:600}
+    .btn:hover{transform:translateY(-3px)}
+    .btn:focus{outline:3px solid rgba(102,179,255,0.16);outline-offset:4px;border-radius:10px}
+
+    /* Primary (keeps warm gold look) */
+    .btn.primary{background:linear-gradient(180deg,#ffd375,#f6c453);color:#241800;font-weight:700;box-shadow:0 10px 26px rgba(246,196,83,.22)}
+    .btn.primary:hover{box-shadow:0 18px 38px rgba(246,196,83,.28);transform:translateY(-4px)}
+
+    /* Ghost */
+    .btn.ghost{background:transparent;color:#dbe3ff}
+    .btn.ghost:hover{background:rgba(255,255,255,0.02)}
+
+    /* Email button */
+    .email-btn{background:linear-gradient(180deg,#66b3ff,#3b8fe6);color:white;font-weight:700;border:none;padding:10px 16px;border-radius:12px;box-shadow:0 10px 24px rgba(59,143,230,.14)}
+    .email-btn:hover{box-shadow:0 18px 40px rgba(59,143,230,.24);transform:translateY(-3px)}
+
+    /* Bright Enquire button (new) */
+    .btn.enquire{
+      background:linear-gradient(180deg, #6ee7ff, #3b8fe6); /* bright cyan-blue */
+      color: #051226;
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: 0 16px 50px var(--bright-glow), 0 2px 6px rgba(0,0,0,0.45);
+      font-weight:800;
+      letter-spacing:0.2px;
+      transition:transform .14s, box-shadow .14s, filter .12s;
+    }
+    .btn.enquire:hover{
+      transform:translateY(-5px) scale(1.02);
+      box-shadow: 0 28px 70px rgba(59,143,230,0.28), 0 2px 10px rgba(0,0,0,0.5);
+      filter:brightness(1.03);
+    }
+    .btn.enquire:active{
+      transform:translateY(-2px) scale(.99);
+      box-shadow: 0 14px 36px rgba(59,143,230,0.22);
+    }
+    .btn.enquire:focus{
+      outline: 3px solid rgba(102,179,255,0.22);
+      outline-offset:4px;
+    }
+    /* Make Enquire buttons stand out on dark backgrounds */
+    .room .meta .btn.enquire{min-width:96px;text-align:center;padding:10px 12px}
+
+    /* Highlight the booking card briefly when an Enquire triggers it */
+    .card.highlight{
+      box-shadow: 0 30px 80px rgba(102,179,255,0.18), 0 10px 40px rgba(0,0,0,0.6) !important;
+      transform: translateY(-10px);
+      border: 1px solid rgba(102,179,255,0.18);
+      transition: box-shadow .28s, transform .28s, border .28s;
+    }
+
+    .lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(4,6,12,0.85);z-index:120;padding:28px}
+    .lightbox.open{display:flex}
+    .lightbox .frame{max-width:1200px;width:100%;max-height:92vh;position:relative;display:flex;align-items:center;justify-content:center}
+    .lightbox img{max-width:100%;max-height:92vh;border-radius:8px;box-shadow:0 20px 50px rgba(0,0,0,.6)}
+    .lightbox .close, .lightbox .prev, .lightbox .next{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.06);padding:8px;border-radius:8px;color:#fff;cursor:pointer}
+    .lightbox .prev{left:12px;right:auto;top:50%;transform:translateY(-50%)}
+    .lightbox .next{right:12px;top:50%;transform:translateY(-50%)}
+
+    @media (max-width:980px){.cards{grid-template-columns:1fr 1fr}.rooms{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.amenities{grid-template-columns:1fr 1fr}.split{grid-template-columns:1fr}}
+    @media (max-width:720px){
+      .menu{display:none;position:absolute;top:64px;right:4%;flex-direction:column;background:rgba(8,12,24,0.96);border:1px solid rgba(255,255,255,0.04);padding:12px;border-radius:12px;width:92%}
+      .menu.open{display:flex}
+      .hamburger{display:flex}
+      .cards{grid-template-columns:1fr;margin-top:-18px}
+      .rooms{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr}
+      .amenities{grid-template-columns:1fr}
+      .top-header{display:flex;flex-direction:column;gap:8px;align-items:center}
+      .nav-logo{ width:44px; height:44px; }
+    }
+
+    .fade-in{animation:fadeIn .7s ease both}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(102,179,255,0.12);outline-offset:2px;border-radius:6px}
+
+    /* small improvement for select styling to fit the design */
+    select.room-select{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:#0e1430;color:#e9ecf8;font-weight:600}
+  </style>
+</head>
+<body>
+  <!-- SITE HEADER: sticky navigation with circular logo to prevent overlap -->
+  <header class="site-header" role="banner">
+    <div class="container nav">
+      <div class="brand">
+        <img class="nav-logo" src="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/IMG_1215.JPG" alt="Golden Peak logo">
+        <div>
+          <h1>Hotel Golden Peak</h1>
+          <span class="sub">Tadapani, Annapurna Region • Nepal</span>
+        </div>
+      </div>
+
+      <nav aria-label="Main Navigation">
+        <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <div class="menu" id="menu" role="menu">
+          <a href="#about" role="menuitem">About</a>
+          <a href="#rooms" role="menuitem">Rooms</a>
+          <a href="#amenities" role="menuitem">Amenities</a>
+          <a href="#gallery" role="menuitem">Gallery</a>
+          <a href="#location" role="menuitem">Location</a>
+          <a href="#contact" role="menuitem">Contact</a>
+          <!-- Book Now button made very visible green -->
+          <a class="cta btn-book" href="#book" role="menuitem" id="navBook">Book Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home" aria-label="Scenic mountain hero">
+    <div class="wrap">
+      <div class="container" style="text-align:center">
+        <h2 class="fade-in">Sleep close to the stars. Wake to Annapurna views.</h2>
+        <p class="fade-in">Welcome to Tadapani’s cozy perch—perfect for trekkers on the Ghorepani–Ghandruk route. Warm rooms, hot meals, and sunrises that paint Annapurna and Machhapuchhre in gold.</p>
+        <div class="badges fade-in" aria-hidden="true">
+          <span class="badge">Panorama Terrace</span>
+          <span class="badge">Hot Shower</span>
+          <span class="badge">Power &amp; Wi-Fi</span>
+          <span class="badge">Local &amp; Continental Meals</span>
+        </div>
+        <div class="actions fade-in" style="margin-top:18px">
+          <a class="btn primary" href="#book">Book Your Stay</a>
+          <a class="btn ghost" href="#about">Explore</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlight Cards -->
+  <div class="container grid cards" style="margin-top:14px;">
+    <article class="card fade-in">
+      <div class="pic"><img alt="Sunrise over Annapurna" loading="lazy" src="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/IMG_1215.JPG" /></div>
+      <div class="content">
+        <h3>Golden Sunrises</h3>
+        <p>Catch first light over Annapurna South and Fishtail from our terrace—no alarm needed, the mountains will wake you.</p>
+      </div>
+    </article>
+    <article class="card fade-in">
+      <div class="pic"><img alt="warm dinin" loading="lazy" src="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/IMG_4083.JPG" /></div>
+      <div class="content">
+        <h3>Warm Dining</h3>
+        <p>Golden Peak Hotel in Tadapani, Nepal, offers a delightful dining experience amidst the serene beauty of the Annapurna region. Their restaurant serves a variety of local and international dishes, ensuring a satisfying meal for every guest. The dining area provides a warm and welcoming atmosphere, perfect for enjoying meals while taking in the breathtaking mountain views.</p>
+      </div>
+    </article>
+    <article class="card fade-in">
+      <div class="pic"><img alt="Hot meal" loading="lazy" src="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/IMG_3835.JPG" /></div>
+      <div class="content">
+        <h3>Hearty Kitchen</h3>
+        <p>Dal bhat, momos, soups, and fresh teas—fuel for treks and stories.</p>
+      </div>
+    </article>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container split">
+      <div>
+        <h2 class="section-title">About Us</h2>
+        <p class="section-lead">Hotel Golden Peak Annapurna 11 is a family-run lodge in Tadapani, a popular overnight stop on the Annapurna trekking trails. We’re committed to warm hospitality, honest food, and unforgettable vistas.</p>
+        <ul style="line-height:1.9;color:var(--muted); list-style:disc; margin-left:18px; max-width:660px;">
+          <li>Ideal for Ghorepani–Ghandruk–ABC route trekkers</li>
+          <li>Sunrise terrace with direct mountain views</li>
+          <li>Trekking info, bag storage &amp; route tips</li>
+          <li>Group-friendly dining and flexible meal times</li>
+          <li>Pony service available</li>
+        </ul>
+        <div style="margin-top:14px">
+          <a class="btn primary" href="#rooms">See Rooms</a>
+          <a class="btn ghost" href="#dining" style="margin-left:8px">View Menu</a>
+        </div>
+      </div>
+      <div>
+        <img alt="Tadapani village with Himalaya backdrop" loading="lazy" src="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/IMG_3827%20(1).JPG" style="border-radius:12px;border:1px solid rgba(255,255,255,0.04)" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Rooms -->
+  <section id="rooms">
+    <div class="container">
+      <h2 class="section-title">Rooms &amp; Rates</h2>
+      <p class="section-lead">Simple, clean, and warm. Pricing varies by season. Contact us below for today’s rates.</p>
+      <div class="grid rooms">
+        <article class="room">
+          <img alt="Single room" loading="lazy" src="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/mmexport1714019044990.jpg">
+          <div class="content">
+            <h3>Single Room</h3>
+            <p style="color:var(--muted)">A single bed • Mountain-side windows, clean bedding, warm blankets, and quiet nights—ideal after a good day’s walk.</p>
+          </div>
+          <div class="meta">
+            <span> NPR —800 (negotiable)</span>
+            <!-- Enquire now prefills the form with the room type -->
+            <button class="btn enquire" onclick="openEnquiry('Single Room')" aria-label="Enquire Single Room">Enquire</button>
+          </div>
+        </article>
+        <article class="room">
+          <img alt="Double room" loading="lazy" src="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/IMG_3542.jpg">
+          <div class="content">
+            <h3>Double Room</h3>
+            <p style="color:var(--muted)">Two single beds • Shared or attached bath options</p>
+          </div>
+          <div class="meta">
+            <span> NPR — 1000 (negotiable) </span>
+            <button class="btn enquire" onclick="openEnquiry('Double Room')" aria-label="Enquire Double Room">Enquire</button>
+          </div>
+        </article>
+        <article class="room">
+          <img alt="Family room" loading="lazy" src="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/IMG20240603143523.jpg">
+          <div class="content">
+            <h3>Family / Group (Triple Bed)</h3>
+            <p style="color:var(--muted)">Flexible bedding • Ideal for 3–4 guests</p>
+          </div>
+          <div class="meta">
+            <span>NPR—1200 (negotiable and adjustable)</span>
+            <button class="btn enquire" onclick="openEnquiry('Triple Room (Family)')" aria-label="Enquire Triple Room">Enquire</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities -->
+  <section id="amenities">
+    <div class="container">
+      <h2 class="section-title">Amenities</h2>
+      <p class="section-lead">Everything you need at trekking altitude.</p>
+      <div class="grid amenities">
+        <div class="amen"><h4>Wi-Fi</h4><p style="color:var(--muted)">Weather/Power dependent</p></div>
+        <div class="amen"><h4>Hot Shower</h4><p style="color:var(--muted)">Gas geyser</p></div>
+        <div class="amen"><h4>Charge Points</h4><p style="color:var(--muted)">For phones &amp; batteries</p></div>
+        <div class="amen"><h4>Laundry</h4><p style="color:var(--muted)">On request, weather-permitting</p></div>
+        <div class="amen"><h4>Trek Support</h4><p style="color:var(--muted)">Routes, timing &amp; permits guidance</p></div>
+        <div class="amen"><h4>Bag Storage</h4><p style="color:var(--muted)">Short-term safe keeping</p></div>
+        <div class="amen"><h4>Fireplace fire</h4><p style="color:var(--muted)">Evening warmth </p></div>
+        <div class="amen"><h4>First Aid</h4><p style="color:var(--muted)">Basic supplies available</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <div class="container">
+      <h2 class="section-title">Gallery</h2>
+      <p class="section-lead">A peek at moments from the ridge. Click any image to view full size.</p>
+      <div class="grid gallery" id="galleryGrid">
+        <img alt="Annapurna range" src="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/sj.webp" data-full="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/sj.webp">
+        <img alt="Tea house vibes" src="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/IMG_1215.JPG" data-full="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/IMG_1215.JPG">
+        <img alt="Bonfire evening" src="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/rsp.jpg" data-full="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/rsp.jpg">
+        <img alt="Bonfire evening" src="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/IMG_1353.JPG" data-full="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/IMG_1353.JPG">
+        <img alt="Trekking trail" src="https://uploads.onecompiler.io/43ufp72wr/43uupkhe8/IMG_1273%20(1).JPG" data-full="https://uploads.onecompiler.io/43ufp72wr/43uupkhe8/IMG_1273%20(1).JPG">
+        <img alt="Trekking trail" src="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/ss.webp" data-full="https://uploads.onecompiler.io/43ufp72wr/43ut9qvb9/ss.webp">
+        <img alt="Trekking trail" src="https://uploads.onecompiler.io/43ufp72wr/43uupkhe8/IMG_4718.jpg" data-full="https://uploads.onecompiler.io/43ufp72wr/43uupkhe8/IMG_4718.jpg">
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <div class="frame" role="document">
+      <button class="close" id="lbClose" aria-label="Close image viewer">✕</button>
+      <button class="prev" id="lbPrev" aria-label="Previous image">◀</button>
+      <img id="lbImg" src="" alt="">
+      <button class="next" id="lbNext" aria-label="Next image">▶</button>
+    </div>
+  </div>
+
+  <!-- Location -->
+  <section id="location">
+    <div class="container split">
+      <div>
+        <h2 class="section-title">Find Us in Tadapani</h2>
+        <p class="section-lead">On the ridge between Ghandruk and Ghorepani. Ask any local for “Golden Peak” in Tadapani—everyone knows us.</p>
+        <ul style="line-height:1.9;color:var(--muted)">
+          <li>From Ghandruk: ~3–4 hours trek</li>
+          <li>From Ghorepani: ~4–5 hours trek</li>
+          <li>Best season: Sept–Nov &amp; Mar–May</li>
+        </ul>
+      </div>
+      <iframe class="map" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Map to Tadapani" src="https://www.google.com/maps?q=Tadapani%2C%20Ghandruk&output=embed"></iframe>
+    </div>
+  </section>
+
+  <!-- Contact & Booking -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact &amp; Booking</h2>
+      <p class="section-lead">Message us on phone or WhatsApp for the fastest reply. We’ll confirm room type, date, and arrival time.</p>
+
+      <div class="grid" style="grid-template-columns:1fr 1fr;gap:20px">
+        <div class="card" id="book" style="padding:0;background:linear-gradient(180deg, rgba(18,23,54,.95), rgba(12,14,30,.95))">
+          <div class="content" style="padding:18px">
+            <h3>Quick Enquiry</h3>
+            <!-- Hidden + visible selected room field replaced with a select -->
+            <form id="enquiryForm" onsubmit="event.preventDefault(); sendEnquiry();" aria-label="Booking enquiry form">
+              <label style="display:block">Name<br>
+                <input required id="name" name="name" type="text" placeholder="Your name" style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:#0e1430;color:#e9ecf8">
+              </label>
+              <div style="height:10px"></div>
+
+              <label style="display:block">Check-in<br>
+                <input required id="checkin" name="checkin" type="date" style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:#0e1430;color:#e9ecf8">
+              </label>
+              <div style="height:10px"></div>
+
+              <label style="display:block">Guests<br>
+                <input required id="guests" name="guests" type="number" min="1" value="2" style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:#0e1430;color:#e9ecf8">
+              </label>
+              <div style="height:10px"></div>
+
+              <label style="display:block">Selected Room<br>
+                <!-- USER CHOICE: select instead of free text -->
+                <select id="selectedRoom" name="selectedRoom" class="room-select" aria-label="Select room type">
+                  <option value="">-- Room Type --</option>
+                  <option value="Single Room">Single Room</option>
+                  <option value="Double Room">Double Room</option>
+                  <option value="Triple Room (Family)">Family / Triple Room</option>
+                </select>
+                <!-- real value passed in the hidden input for compatibility with existing systems -->
+                <input type="hidden" id="roomType" name="roomType" value="">
+              </label>
+
+              <div style="height:10px"></div>
+              <label style="display:block">Message<br>
+                <textarea id="message" name="message" rows="4" placeholder="Any message, special requests…" style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:#0e1430;color:#e9ecf8"></textarea>
+              </label>
+              <div style="height:14px"></div>
+
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <button class="btn primary" type="submit" aria-label="Send enquiry via WhatsApp">Book Via WhatsApp</button>
+                <a class="btn ghost" href="tel:+9779848260871" aria-label="Call us">Call Us</a>
+                <button type="button" class="email-btn" id="emailButton" aria-label="Email us">Email Us</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="card" style="padding:18px">
+          <div class="content">
+            <h3>Details</h3>
+            <p style="color:var(--muted)">
+              <strong>Phone:</strong> <a href="tel:+9779848260871" style="color:var(--muted);text-decoration:underline;">+977-9848260871</a><br>
+              <strong>WhatsApp:</strong> <a href="https://wa.me/9779769222686" target="_blank" rel="noopener" style="color:var(--muted);text-decoration:underline;">+977-9769222686</a><br>
+              <strong>Email:</strong> <a href="mailto:goldenpeak.annapurna11@gmail.com" style="color:var(--muted);text-decoration:underline;">goldenpeak.annapurna11@gmail.com</a><br>
+            </p>
+
+            <p style="color:var(--muted)"><strong> "24 hrs Wi-Fi and hot water availability."</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social -->
+  <section id="social">
+    <div class="container" style="text-align:center;padding:8px 0 28px;">
+      <h2 class="section-title">FOLLOW and BOOK via:</h2>
+      <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:12px">
+        <a class="btn primary" target="_blank" rel="noopener" href="https://www.instagram.com/hotelgoldenpeak01/" aria-label="Instagram">Instagram</a>
+        <a class="btn primary" target="_blank" rel="noopener" href="https://www.facebook.com/people/Hotel-Golden-Peak/100071771683898/" aria-label="Facebook">Facebook</a>
+        <a class="btn primary" target="_blank" rel="noopener" href="https://www.tiktok.com/@sudeeppaudel2540" aria-label="TikTok">TikTok</a>
+        <a class="email-btn" id="socialEmail" href="mailto:goldenpeak.annapurna11@gmail.com?subject=Booking%20Inquiry%20from%20Website" aria-label="Email Golden Peak">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>
+        <strong>Hotel Golden Peak Tadapani</strong><br><small>Tadapani, Annapurna Region • Nepal</small>
+      </div>
+      <div><small>© <span id="year"></span> Golden Peak. All rights reserved.</small></div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Centralized WhatsApp number used by the JS functions below
+    const HOTEL_WHATSAPP = '+9779769222686'; // owner WhatsApp (keep international code)
+
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+    if(hamburger) {
+      hamburger.addEventListener('click', ()=> { const isOpen = menu.classList.toggle('open'); hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false'); });
+      hamburger.addEventListener('keypress', (e) => { if(e.key==='Enter' || e.key===' ') hamburger.click(); });
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /**
+     * Prefill + focus the enquiry form with a selected room type,
+     * scroll to the form so the guest can complete details.
+     * Adds a highlight to the booking card for visual feedback.
+     *
+     * Now sets the <select> value instead of a free-text input.
+     */
+    function openEnquiry(roomName){
+      const select = document.getElementById('selectedRoom');
+      const hiddenRoom = document.getElementById('roomType');
+      if(select){
+        // try to match an option value; if none matches, add a temporary option and select it
+        const opt = Array.from(select.options).find(o => o.value === roomName);
+        if(opt){
+          select.value = roomName;
+        } else if(roomName){
+          // create a temporary option so the user's selection shows up
+          const tmp = document.createElement('option');
+          tmp.value = roomName;
+          tmp.textContent = roomName;
+          select.appendChild(tmp);
+          select.value = roomName;
+        }
+        select.focus();
+      }
+      if(hiddenRoom) hiddenRoom.value = roomName || select.value || '';
+
+      const bookCard = document.getElementById('book');
+      const nameInput = document.getElementById('name');
+      if(bookCard){
+        bookCard.classList.add('highlight');
+        setTimeout(()=> { bookCard.classList.remove('highlight'); }, 4000);
+        bookCard.scrollIntoView({behavior:'smooth', block:'center'});
+        setTimeout(()=>{ if(nameInput) nameInput.focus(); }, 450);
+      }
+    }
+
+    /* keep hidden input in sync when user changes the select manually */
+    const selectedRoomSelect = document.getElementById('selectedRoom');
+    if(selectedRoomSelect){
+      selectedRoomSelect.addEventListener('change', (e) => {
+        const hiddenRoom = document.getElementById('roomType');
+        if(hiddenRoom) hiddenRoom.value = e.target.value || '';
+      });
+    }
+
+    /* WhatsApp helpers: normalize, build URLs, open reliably */
+    function normalizePhone(number){
+      return (number || '').toString().replace(/\D/g,'');
+    }
+
+    function buildUrls(phoneDigits, text){
+      const encoded = encodeURIComponent(text);
+      return {
+        api:  `https://api.whatsapp.com/send?phone=${phoneDigits}&text=${encoded}`,
+        waMe: `https://wa.me/${phoneDigits}?text=${encoded}`,
+        web:  `https://web.whatsapp.com/send?phone=${phoneDigits}&text=${encoded}`
+      };
+    }
+
+    function openWhatsApp(number, text){
+      const phone = normalizePhone(number);
+      const urls = buildUrls(phone, text);
+
+      // Prefer navigating to api.whatsapp.com (mobile apps + desktop redirect to web)
+      // Use location.href to reduce popup-blocking issues in some browsers
+      console.log('Opening WhatsApp URL:', urls.api);
+
+      // Try to navigate current tab (less likely to be blocked)
+      window.location.href = urls.api;
+
+      // If you prefer to open in a new tab, use window.open(urls.api, '_blank')
+    }
+
+    function sendEnquiry(){
+      const name = document.getElementById('name').value.trim();
+      const checkin = document.getElementById('checkin').value || 'Not specified';
+      const guests = document.getElementById('guests').value || '1';
+      const msg = document.getElementById('message').value.trim() || 'None';
+      // read from select first, fall back to hidden input
+      const select = document.getElementById('selectedRoom');
+      const roomType = (select && select.value) ? select.value : (document.getElementById('roomType').value || 'Not specified');
+
+      const textLines = [
+        'Namaste! I would like to enquire about booking at Hotel Golden Peak, Tadapani.',
+        `Room: ${roomType}`,
+        `Name: ${name || 'Not specified'}`,
+        `Check-in: ${checkin}`,
+        `Guests: ${guests}`,
+        `Notes / Requests: ${msg}`,
+        '',
+        'Thank you,',
+        `${name || ''}`
+      ];
+      const text = textLines.join('\n');
+
+      const digits = normalizePhone(HOTEL_WHATSAPP);
+      if(!digits){
+        console.error('WhatsApp number is invalid:', HOTEL_WHATSAPP);
+        alert('WhatsApp number appears invalid. Please contact us by phone or email.');
+        return;
+      }
+
+      // Log all URL variants so you can copy/paste them into the address bar for testing
+      const urls = buildUrls(digits, text);
+      console.log('WhatsApp URL variants:', urls);
+
+      // Open the preferred variant
+      openWhatsApp(HOTEL_WHATSAPP, text);
+    }
+
+    // Email button behaviour (fills mailto with form data)
+    const emailBtn = document.getElementById('emailButton');
+    if(emailBtn){
+      emailBtn.addEventListener('click', () => {
+        const name = document.getElementById('name').value.trim() || '';
+        const checkin = document.getElementById('checkin').value || '';
+        const guests = document.getElementById('guests').value || '';
+        const msg = document.getElementById('message').value.trim() || '';
+        const select = document.getElementById('selectedRoom');
+        const roomType = (select && select.value) ? select.value : (document.getElementById('roomType').value || '');
+
+        const to = 'goldenpeak.annapurna11@gmail.com';
+        const subject = `Booking Enquiry — ${name || 'Website Visitor'}`;
+        let body = `Namaste,\n\nI would like to enquire about booking at Hotel Golden Peak, Tadapani. \n\nRoom: ${roomType}\nName: ${name}\nCheck-in: ${checkin}\nGuests: ${guests}\n\nNotes / Requests:\n${msg}\n\nThank you,\n${name}`;
+        const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailto;
+      });
+    }
+
+    const socialEmail = document.getElementById('socialEmail');
+    if(socialEmail) socialEmail.href = 'mailto:goldenpeak.annapurna11@gmail.com?subject=' + encodeURIComponent('Booking Inquiry from Website');
+
+    /* gallery lightbox */
+    (function(){
+      const grid = document.getElementById('galleryGrid');
+      if(!grid) return;
+      const images = Array.from(grid.querySelectorAll('img'));
+      const lightbox = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lbImg');
+      const lbClose = document.getElementById('lbClose');
+      const lbPrev = document.getElementById('lbPrev');
+      const lbNext = document.getElementById('lbNext');
+      let idx = 0;
+      function openAt(i){ const img = images[i]; const full = img.dataset.full || img.src; lbImg.src = full; lbImg.alt = img.alt || ''; idx = i; lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden','false'); document.body.style.overflow = 'hidden'; }
+      function closeLB(){ lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden','true'); lbImg.src = ''; document.body.style.overflow = ''; }
+      images.forEach((img, i) => { img.addEventListener('click', ()=> openAt(i)); img.addEventListener('keypress', (e) => { if(e.key === 'Enter') openAt(i); }); img.setAttribute('tabindex','0'); });
+      if(lbClose) lbClose.addEventListener('click', closeLB);
+      if(lightbox) lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) closeLB(); });
+      if(lbPrev) lbPrev.addEventListener('click', ()=>{ idx = (idx - 1 + images.length) % images.length; openAt(idx); });
+      if(lbNext) lbNext.addEventListener('click', ()=>{ idx = (idx + 1) % images.length; openAt(idx); });
+      document.addEventListener('keydown', (e)=>{ if(lightbox.classList.contains('open')){ if(e.key === 'Escape') closeLB(); if(e.key === 'ArrowLeft') lbPrev.click(); if(e.key === 'ArrowRight') lbNext.click(); } });
+    })();
+
+    /* Optional: ensure Book Now scroll behavior is smooth (keeps anchor but enhances UX) */
+    (function(){
+      const navBook = document.getElementById('navBook');
+      if(navBook){
+        navBook.addEventListener('click', (e)=>{
+          // allow normal anchor behavior in most cases, but do a smooth scroll
+          e.preventDefault();
+          const bookCard = document.getElementById('book');
+          if(bookCard){
+            bookCard.scrollIntoView({behavior:'smooth', block:'center'});
+            setTimeout(()=>{ const nameInput = document.getElementById('name'); if(nameInput) nameInput.focus(); }, 450);
+          } else {
+            window.location.href = '#book';
+          }
+        });
+      }
+    })();
+
+    // ensure the select and hidden input stay in sync if a roomType value exists on load
+    (function(){
+      const hidden = document.getElementById('roomType');
+      const select = document.getElementById('selectedRoom');
+      if(hidden && hidden.value && select){
+        const opt = Array.from(select.options).find(o => o.value === hidden.value);
+        if(opt) select.value = hidden.value;
+        else {
+          const tmp = document.createElement('option'); tmp.value = hidden.value; tmp.textContent = hidden.value; select.appendChild(tmp); select.value = hidden.value;
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
